@@ -1,0 +1,15 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Streamlit
+.streamlit/
+
+# SQLite
+*.db
+
+# OS
+.DS_Store
+
+
