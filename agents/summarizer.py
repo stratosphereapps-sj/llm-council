@@ -1,9 +1,11 @@
 from agents.base_agent import BaseAgent
+from config import CHAIRMAN_MODEL
 
 class SummarizerAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="Summarizer",
+            model=CHAIRMAN_MODEL,  # Using chairman model for final synthesis
             role_prompt="""You are the Summarizer.
 
 Your task is to synthesize the discussion into a clear,

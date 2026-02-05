@@ -1,9 +1,11 @@
 from agents.base_agent import BaseAgent
+from config import COUNCIL_MODELS
 
 class GenerateAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="Generate",
+            model=COUNCIL_MODELS[0],  # Using first model
             role_prompt="""You are the Generator.
 
 Your task is to transform the user's topic into a clear,

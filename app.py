@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 st.title("🧠 LLM Council")
-st.caption("Multi-agent reasoning powered by Gemma (Ollama)")
+st.caption("Multi-agent reasoning powered by Gemini 3 Flash")
 
 # ---- Input ----
 topic = st.text_area(

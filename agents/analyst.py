@@ -1,9 +1,11 @@
 from agents.base_agent import BaseAgent
+from config import COUNCIL_MODELS
 
 class AnalystAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="Analyst",
+            model=COUNCIL_MODELS[1],  # Using second model
             role_prompt="""You are the Analyst.
 
 Your task is to analyze the problem strictly based on the input provided.

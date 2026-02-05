@@ -1,9 +1,11 @@
 from agents.base_agent import BaseAgent
+from config import COUNCIL_MODELS
 
 class CriticAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="Critic",
+            model=COUNCIL_MODELS[2],  # Using third model
             role_prompt="""You are the Critic.
 
 Your task is to rigorously challenge the previous analysis.

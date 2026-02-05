@@ -1,10 +1,12 @@
 from ollama_client import query_ollama
+from config import COUNCIL_MODELS
 
 class BaseAgent:
-    def __init__(self, name: str, role_prompt: str, model="gemma3:4b"):
+    def __init__(self, name: str, role_prompt: str, model=None):
         self.name = name
         self.role_prompt = role_prompt
-        self.model = model
+        # Use the first council model as default if no model specified
+        self.model = model if model else COUNCIL_MODELS[0]
 
     def run(self, input_text: str) -> str:
         full_prompt = f"""
